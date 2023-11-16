@@ -10,7 +10,8 @@
         <item>EfficientDet Lite0</item>
         <item>EfficientDet Lite1</item>
         <item>EfficientDet Lite2</item>
-        <item>15000-32</item>
+        <item>15000_32</item>
+        <item>15000_16</item>
         <item>error</item>
     </string-array>
     <attr format="reference" name="animate_relativeTo"/>
