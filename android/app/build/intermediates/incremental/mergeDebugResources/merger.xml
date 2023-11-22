@@ -3959,6 +3959,9 @@
         <item>EfficientDet Lite2</item>
         <item>15000_32</item>
         <item>15000_16</item>
+        <item>20000_16</item>
+        <item>27000_16</item>
+        <item>30000_16</item>
         <item>error</item>
     </string-array></file><file path="C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
     </style><style name="BottomSheetSpinnerItemStyle" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
