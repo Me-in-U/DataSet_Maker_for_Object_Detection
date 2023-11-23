@@ -88,12 +88,7 @@ class ObjectDetectorHelper(
                 MODEL_EFFICIENTDETV0 -> "efficientdet-lite0.tflite"
                 MODEL_EFFICIENTDETV1 -> "efficientdet-lite1.tflite"
                 MODEL_EFFICIENTDETV2 -> "efficientdet-lite2.tflite"
-                MODEL_15000_32 -> "15000_32.tflite"
-                MODEL_15000_16 -> "15000_16.tflite"
-                MODEL_20000_16 -> "20000_16.tflite"
-                MODEL_27000_16 -> "27000_16.tflite"
-                MODEL_30000_16 -> "30000_16.tflite"
-                MODEL_error -> "error.tflite"
+                MODEL_CUSTOM -> "detectMETA.tflite"
                 else -> "mobilenetv1.tflite"
             }
 
@@ -155,11 +150,6 @@ class ObjectDetectorHelper(
         const val MODEL_EFFICIENTDETV0 = 1
         const val MODEL_EFFICIENTDETV1 = 2
         const val MODEL_EFFICIENTDETV2 = 3
-        const val MODEL_15000_32 = 4
-        const val MODEL_15000_16 = 5
-        const val MODEL_20000_16 = 6
-        const val MODEL_27000_16 = 7
-        const val MODEL_30000_16 = 8
-        const val MODEL_error = 9
+        const val MODEL_CUSTOM = 4
     }
 }

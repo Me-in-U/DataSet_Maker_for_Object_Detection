@@ -19,3 +19,13 @@ Napp/src/main/java/org/tensorflow/lite/examples/objectdetection/MainActivity.kt
 Zapp/src/main/java/org/tensorflow/lite/examples/objectdetection/fragments/CameraFragment.kt,8\d\8d277b6e21fcc0834c219c235fa08b0ca096c032
 è
 _app/src/main/java/org/tensorflow/lite/examples/objectdetection/fragments/PermissionsFragment.kt,d\7\d7b0770d0977a18779f6d7673fa6fab4a743009c
+F
+app/proguard-rules.pro,9\e\9e08934d811afe28fbc77aaa3c0d747b94348db9
+@
+local.properties,0\7\0712df971a99ac4d2fccb8e0fb19f377f3374cca
+@
+app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
+X
+(gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
+J
+app/download_models.gradle,2\c\2cd6999009ccccda93d1b85973b0ac8880bb91b7

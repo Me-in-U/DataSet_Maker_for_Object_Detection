@@ -21,14 +21,15 @@ apply plugin: "androidx.navigation.safeargs"
 apply plugin: 'de.undercouch.download'
 
 android {
-    compileSdkVersion 32
+    namespace = "org.tensorflow.lite.examples.objectdetection"
+    compileSdk =32
     defaultConfig {
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        applicationId "org.tensorflow.lite.examples.objectdetection"
-        minSdkVersion 21
-        targetSdkVersion 32
-        versionCode 1
-        versionName "1.0.0"
+        testInstrumentationRunner ="androidx.test.runner.AndroidJUnitRunner"
+        applicationId ="org.tensorflow.lite.examples.objectdetection"
+        minSdk = 21
+        targetSdk= 32
+        versionCode =1
+        versionName ="1.0.0"
     }
 
     dataBinding {
@@ -36,8 +37,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility rootProject.ext.java_version
-        targetCompatibility rootProject.ext.java_version
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     kotlinOptions {
@@ -46,13 +47,13 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled false
         }
     }
 
     buildFeatures {
-        viewBinding true
+        viewBinding =  true
     }
     androidResources {
         noCompress 'tflite'
@@ -118,6 +119,6 @@ dependencies {
 
     implementation 'org.tensorflow:tensorflow-lite-task-vision:0.4.0'
     // Import the GPU delegate plugin Library for GPU inference
-    implementation 'org.tensorflow:tensorflow-lite-gpu-delegate-plugin:0.4.0'
-    implementation 'org.tensorflow:tensorflow-lite-gpu:2.9.0'
+    implementation 'org.tensorflow:tensorflow-lite-gpu-delegate-plugin:0.4.3'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.10.0'
 }
