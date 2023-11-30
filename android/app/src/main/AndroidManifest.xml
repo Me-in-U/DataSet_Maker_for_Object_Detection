@@ -38,7 +38,7 @@
         tools:ignore="AllowBackup">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".NaviActivity"
             android:clearTaskOnLaunch="true"
             android:theme="@style/AppTheme"
             android:exported="true"
@@ -58,6 +58,7 @@
             <meta-data android:name="android.notch_support" android:value="true"/>
 
         </activity>
+
 
     </application>
 

@@ -1,14 +1,34 @@
 [
     {
+        "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_detect_cam.xml",
+        "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\layout\\fragment_detect_cam.xml"
+    },
+    {
+        "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_navi.xml",
+        "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\layout\\activity_navi.xml"
+    },
+    {
+        "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_calendar.xml",
+        "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\layout\\fragment_calendar.xml"
+    },
+    {
+        "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_my_page.xml",
+        "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\layout\\fragment_my_page.xml"
+    },
+    {
         "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\info_bottom_sheet.xml",
         "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\layout\\info_bottom_sheet.xml"
     },
     {
-        "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
-        "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_create.xml",
+        "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\layout\\fragment_create.xml"
     },
     {
         "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_camera.xml",
         "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\layout\\fragment_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\layout\\fragment_home.xml"
     }
 ]

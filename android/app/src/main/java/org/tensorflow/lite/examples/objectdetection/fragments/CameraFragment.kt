@@ -51,7 +51,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
     private var _fragmentCameraBinding: FragmentCameraBinding? = null
 
     private val fragmentCameraBinding
-        get() = _fragmentCameraBinding!!
+        get() = _fragmentCameraBinding ?: throw IllegalStateException("View Binding is null")
 
     private lateinit var objectDetectorHelper: ObjectDetectorHelper
     private lateinit var bitmapBuffer: Bitmap
@@ -65,36 +65,45 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
 
     override fun onResume() {
         super.onResume()
+        Log.d("TEST_LOG", "onResume")
         // Make sure that all permissions are still present, since the
         // user could have removed them while the app was in paused state.
         if (!PermissionsFragment.hasPermissions(requireContext())) {
             Navigation.findNavController(requireActivity(), R.id.fragment_container)
-                .navigate(CameraFragmentDirections.actionCameraToPermissions())
+                .navigate(org.tensorflow.lite.examples.objectdetection.fragments.CameraFragmentDirections.actionCameraToPermissions())
+        }
+        if (cameraProvider != null) {
+            bindCameraUseCases() // Rebind camera use cases when the fragment resumes
         }
     }
-
+    override fun onPause() {
+        super.onPause()
+        Log.d("TEST_LOG", "onPause")
+        // 카메라 사용 해제
+        cameraProvider?.unbindAll()
+    }
     override fun onDestroyView() {
         _fragmentCameraBinding = null
         super.onDestroyView()
-
+        Log.d("TEST_LOG", "onDestroyView")
         // Shut down our background executor
         cameraExecutor.shutdown()
     }
 
     override fun onCreateView(
-      inflater: LayoutInflater,
-      container: ViewGroup?,
-      savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View {
         _fragmentCameraBinding = FragmentCameraBinding.inflate(inflater, container, false)
-
+        Log.d("TEST_LOG", "onCreateView")
         return fragmentCameraBinding.root
     }
 
     @SuppressLint("MissingPermission")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        Log.d("TEST_LOG", "MissingPermission")
         objectDetectorHelper = ObjectDetectorHelper(
             context = requireContext(),
             objectDetectorListener = this)
@@ -209,11 +218,11 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
     // Initialize CameraX, and prepare to bind the camera use cases
     private fun setUpCamera() {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(requireContext())
+        Log.d("TEST_LOG", "setUpCamera")
         cameraProviderFuture.addListener(
             {
                 // CameraProvider
                 cameraProvider = cameraProviderFuture.get()
-
                 // Build and bind the camera use cases
                 bindCameraUseCases()
             },
@@ -224,15 +233,13 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
     // Declare and bind preview, capture and analysis use cases
     @SuppressLint("UnsafeOptInUsageError")
     private fun bindCameraUseCases() {
-
+        Log.d("TEST_LOG", "bindCameraUseCases")
         // CameraProvider
         val cameraProvider =
             cameraProvider ?: throw IllegalStateException("Camera initialization failed.")
-
         // CameraSelector - makes assumption that we're only using the back camera
         val cameraSelector =
             CameraSelector.Builder().requireLensFacing(CameraSelector.LENS_FACING_BACK).build()
-
         // Preview. Only using the 4:3 ratio because this is the closest to our models
         preview =
             Preview.Builder()
@@ -255,9 +262,9 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
                             // The image rotation and RGB image buffer are initialized only once
                             // the analyzer has started running
                             bitmapBuffer = Bitmap.createBitmap(
-                              image.width,
-                              image.height,
-                              Bitmap.Config.ARGB_8888
+                                image.width,
+                                image.height,
+                                Bitmap.Config.ARGB_8888
                             )
                         }
 
@@ -297,24 +304,35 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
     // Update UI after objects have been detected. Extracts original image height/width
     // to scale and place bounding boxes properly through OverlayView
     override fun onResults(
-      results: MutableList<Detection>?,
-      inferenceTime: Long,
-      imageHeight: Int,
-      imageWidth: Int
+        results: MutableList<Detection>?,
+        inferenceTime: Long,
+        imageHeight: Int,
+        imageWidth: Int
     ) {
+//        activity?.runOnUiThread {
+//            fragmentCameraBinding.bottomSheetLayout.inferenceTimeVal.text =
+//                String.format("%d ms", inferenceTime)
+//
+//            // Pass necessary information to OverlayView for drawing on the canvas
+//            fragmentCameraBinding.overlay.setResults(
+//                results ?: LinkedList<Detection>(),
+//                imageHeight,
+//                imageWidth
+//            )
+//
+//            // Force a redraw
+//            fragmentCameraBinding.overlay.invalidate()
+//        }
         activity?.runOnUiThread {
-            fragmentCameraBinding.bottomSheetLayout.inferenceTimeVal.text =
-                            String.format("%d ms", inferenceTime)
-
-            // Pass necessary information to OverlayView for drawing on the canvas
-            fragmentCameraBinding.overlay.setResults(
-                results ?: LinkedList<Detection>(),
-                imageHeight,
-                imageWidth
-            )
-
-            // Force a redraw
-            fragmentCameraBinding.overlay.invalidate()
+            _fragmentCameraBinding?.let { binding ->
+                binding.bottomSheetLayout.inferenceTimeVal.text = String.format("%d ms", inferenceTime)
+                binding.overlay.setResults(
+                    results ?: LinkedList<Detection>(),
+                    imageHeight,
+                    imageWidth
+                )
+                binding.overlay.invalidate()
+            }
         }
     }
 
