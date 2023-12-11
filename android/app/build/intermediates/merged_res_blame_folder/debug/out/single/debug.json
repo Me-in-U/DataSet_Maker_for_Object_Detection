@@ -1,15 +1,27 @@
 [
     {
-        "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\layout-w936dp_activity_login.xml.flat",
+        "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\layout-w936dp\\activity_login.xml"
     },
     {
         "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_home.xml.flat",
         "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\drawable\\ic_home.xml"
     },
     {
+        "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
         "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_navi.xml.flat",
         "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\layout\\activity_navi.xml"
+    },
+    {
+        "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\layout-w1240dp_activity_login.xml.flat",
+        "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\layout-w1240dp\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
         "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_calendar_month.xml.flat",
@@ -32,12 +44,20 @@
         "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_first.xml.flat",
+        "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\layout\\fragment_first.xml"
+    },
+    {
         "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\layout_recycle_item.xml.flat",
+        "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\layout\\recycle_item.xml"
     },
     {
         "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
@@ -96,6 +116,10 @@
         "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_make_photo.xml.flat",
+        "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\layout\\activity_make_photo.xml"
+    },
+    {
         "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
@@ -124,6 +148,10 @@
         "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_camera_container.xml.flat",
+        "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\layout\\fragment_camera_container.xml"
+    },
+    {
         "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable_menu_click_color.xml.flat",
         "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\drawable\\menu_click_color.xml"
     },
@@ -138,9 +166,5 @@
     {
         "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_detect_cam.xml.flat",
-        "source": "C:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\src\\main\\res\\layout\\fragment_detect_cam.xml"
     }
 ]

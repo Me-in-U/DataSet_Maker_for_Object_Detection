@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import org.tensorflow.lite.examples.objectdetection.databinding.ActivityNaviBinding
-import org.tensorflow.lite.examples.objectdetection.fragments.DetectCamFragment
+import org.tensorflow.lite.examples.objectdetection.fragments.CameraFragment
 import org.tensorflow.lite.examples.objectdetection.fragments.CreateFragment
 import org.tensorflow.lite.examples.objectdetection.fragments.MyPageFragment
 
@@ -23,11 +23,11 @@ class NaviActivity : AppCompatActivity() {
         binding = ActivityNaviBinding.inflate(layoutInflater)
         setContentView(binding.root)
         //! 처음 켜면 카메라 화면
-        setFragment(TAG_CAMERA, DetectCamFragment())
+        setFragment(TAG_CAMERA, CameraFragment())
         //! 이후 하단 바에서 선택하면 화면 바뀜
         binding.navigationView.setOnNavigationItemSelectedListener { item ->
             when(item.itemId) {
-                R.id.cameraFragment -> setFragment(TAG_CAMERA, DetectCamFragment())
+                R.id.cameraFragment -> setFragment(TAG_CAMERA, CameraFragment())
                 R.id.createFragment -> setFragment(TAG_HOME, CreateFragment())
                 R.id.myPageFragment -> setFragment(TAG_MY_PAGE, MyPageFragment())
             }

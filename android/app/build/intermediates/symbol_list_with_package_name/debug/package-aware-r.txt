@@ -578,6 +578,7 @@ attr radioButtonStyle
 attr ratingBarStyle
 attr ratingBarStyleIndicator
 attr ratingBarStyleSmall
+attr recyclerViewStyle
 attr region_heightLessThan
 attr region_heightMoreThan
 attr region_widthLessThan
@@ -986,6 +987,8 @@ dimen abc_text_size_subhead_material
 dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
 dimen bottom_sheet_control_btn_size
 dimen bottom_sheet_control_text_side_margin
 dimen bottom_sheet_default_row_margin
@@ -1051,6 +1054,7 @@ dimen design_tab_text_size_2line
 dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fab_margin
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
@@ -1328,6 +1332,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_class
 id alertTitle
 id aligned
 id all
@@ -1350,6 +1355,9 @@ id bottom
 id bottom_sheet_layout
 id bounce
 id buttonPanel
+id button_first
+id button_take_photo
+id button_upload
 id cache_measures
 id cameraFragment
 id camera_container
@@ -1401,6 +1409,7 @@ id dragUp
 id easeIn
 id easeInOut
 id easeOut
+id editTextObjectName
 id edit_query
 id end
 id enterAlways
@@ -1445,7 +1454,12 @@ id inference_time_val
 id info
 id invisible
 id italic
+id item_button_edit
+id item_count
+id item_topic
+id item_topicID
 id item_touch_helper_previous_elevation
+id iv_captured_photo
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -1457,6 +1471,9 @@ id line3
 id linear
 id listMode
 id list_item
+id loading
+id login
+id logoutButton
 id mainFrameLayout
 id masked
 id max_results_minus
@@ -1493,6 +1510,7 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id password
 id path
 id pathRelative
 id percent
@@ -1506,6 +1524,8 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recycler_view
+id register
 id reverseSawtooth
 id right
 id right_icon
@@ -1543,6 +1563,7 @@ id snap
 id snapMargins
 id spacer
 id special_effects_controller_view_tag
+id spinnerObjectClasses
 id spinner_delegate
 id spinner_model
 id spline
@@ -1582,11 +1603,13 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView_Coordinates
 id textWatcher
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
 id textinput_helper_text
+id textview_first
 id threads_minus
 id threads_plus
 id threads_value
@@ -1614,6 +1637,8 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id username
+id usernameTextView
 id view_finder
 id view_offset_helper
 id view_tree_lifecycle_owner
@@ -1680,6 +1705,8 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_login
+layout activity_make_photo
 layout activity_navi
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -1697,8 +1724,9 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_camera
+layout fragment_camera_container
 layout fragment_create
-layout fragment_detect_cam
+layout fragment_first
 layout fragment_my_page
 layout info_bottom_sheet
 layout mtrl_layout_snackbar
@@ -1709,6 +1737,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout recycle_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -1745,6 +1774,8 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string action_sign_in
+string action_sign_in_short
 string alt_bottom_sheet_chevron
 string alt_bottom_sheet_max_results_button_minus
 string alt_bottom_sheet_max_results_button_plus
@@ -1759,8 +1790,11 @@ string character_counter_content_description
 string character_counter_pattern
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string first_fragment_label
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
+string invalid_password
+string invalid_username
 string label_confidence_threshold
 string label_delegate
 string label_fps
@@ -1768,16 +1802,27 @@ string label_interence_time
 string label_max_results
 string label_models
 string label_threads
+string login_failed
+string logout
+string lorem_ipsum
 string mtrl_chip_close_icon_content_description
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
+string next
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string previous
+string prompt_email
+string prompt_password
 string search_menu_title
+string second_fragment_label
 string status_bar_notification_info_overflow
+string title_activity_login
+string title_activity_make_photo
+string welcome
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -1841,6 +1886,7 @@ style Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem
 style Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item
 style Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 style Base_TextAppearance_Widget_AppCompat_Toolbar_Title
+style Base_Theme_Android
 style Base_Theme_AppCompat
 style Base_Theme_AppCompat_CompactMenu
 style Base_Theme_AppCompat_Dialog
@@ -2088,6 +2134,7 @@ style TextAppearance_MaterialComponents_Tab
 style TextAppearance_Widget_AppCompat_ExpandedMenu_Item
 style TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 style TextAppearance_Widget_AppCompat_Toolbar_Title
+style Theme_Android
 style Theme_AppCompat
 style Theme_AppCompat_CompactMenu
 style Theme_AppCompat_DayNight
@@ -2374,7 +2421,7 @@ styleable PopupWindowBackgroundState state_above_anchor
 styleable PreviewView implementationMode scaleType
 styleable PropertySet android_visibility android_alpha layout_constraintTag motionProgress visibilityMode
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
-styleable RecyclerView android_orientation android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
+styleable RecyclerView android_orientation android_clipToPadding android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
 styleable ScrimInsetsFrameLayout insetForeground
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon

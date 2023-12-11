@@ -1,0 +1,9 @@
+<resources>
+
+    <style name="Theme.Android" parent="Theme.MaterialComponents.Light" />
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Android" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+</resources>
