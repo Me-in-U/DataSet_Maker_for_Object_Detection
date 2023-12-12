@@ -3,13 +3,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- RecyclerView -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"
-        android:scrollbars="vertical" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginBottom="30dp">
+        <!-- RecyclerView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/editText_NewTopic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="주제를 적어주세요"
+                android:layout_marginBottom="8dp"
+                />
+
+            <Button
+                android:id="@+id/button_add_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주제 추가" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:scrollbars="vertical" />
+    </LinearLayout>
 
 </RelativeLayout>

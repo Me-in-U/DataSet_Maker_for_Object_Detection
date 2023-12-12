@@ -1355,7 +1355,7 @@ id bottom
 id bottom_sheet_layout
 id bounce
 id buttonPanel
-id button_first
+id button_add_topic
 id button_take_photo
 id button_upload
 id cache_measures
@@ -1367,6 +1367,7 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
+id check_Cordinates
 id checkbox
 id checked
 id chronometer
@@ -1409,7 +1410,7 @@ id dragUp
 id easeIn
 id easeInOut
 id easeOut
-id editTextObjectName
+id editText_NewTopic
 id edit_query
 id end
 id enterAlways
@@ -1493,6 +1494,7 @@ id nav_host_fragment_container
 id navigationView
 id navigation_header_container
 id never
+id newObjectName
 id none
 id normal
 id notification_background
@@ -1609,7 +1611,6 @@ id text_input_password_toggle
 id textinput_counter
 id textinput_error
 id textinput_helper_text
-id textview_first
 id threads_minus
 id threads_plus
 id threads_value
@@ -1726,7 +1727,6 @@ layout design_text_input_password_icon
 layout fragment_camera
 layout fragment_camera_container
 layout fragment_create
-layout fragment_first
 layout fragment_my_page
 layout info_bottom_sheet
 layout mtrl_layout_snackbar

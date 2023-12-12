@@ -33,10 +33,13 @@ public final class ActivityMakePhotoBinding implements ViewBinding {
   public final Button buttonUpload;
 
   @NonNull
-  public final EditText editTextObjectName;
+  public final Button checkCordinates;
 
   @NonNull
   public final ResizableRectangleImageView ivCapturedPhoto;
+
+  @NonNull
+  public final EditText newObjectName;
 
   @NonNull
   public final Spinner spinnerObjectClasses;
@@ -46,14 +49,16 @@ public final class ActivityMakePhotoBinding implements ViewBinding {
 
   private ActivityMakePhotoBinding(@NonNull RelativeLayout rootView, @NonNull Button addClass,
       @NonNull Button buttonTakePhoto, @NonNull Button buttonUpload,
-      @NonNull EditText editTextObjectName, @NonNull ResizableRectangleImageView ivCapturedPhoto,
-      @NonNull Spinner spinnerObjectClasses, @NonNull TextView textViewCoordinates) {
+      @NonNull Button checkCordinates, @NonNull ResizableRectangleImageView ivCapturedPhoto,
+      @NonNull EditText newObjectName, @NonNull Spinner spinnerObjectClasses,
+      @NonNull TextView textViewCoordinates) {
     this.rootView = rootView;
     this.addClass = addClass;
     this.buttonTakePhoto = buttonTakePhoto;
     this.buttonUpload = buttonUpload;
-    this.editTextObjectName = editTextObjectName;
+    this.checkCordinates = checkCordinates;
     this.ivCapturedPhoto = ivCapturedPhoto;
+    this.newObjectName = newObjectName;
     this.spinnerObjectClasses = spinnerObjectClasses;
     this.textViewCoordinates = textViewCoordinates;
   }
@@ -103,15 +108,21 @@ public final class ActivityMakePhotoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.editTextObjectName;
-      EditText editTextObjectName = ViewBindings.findChildViewById(rootView, id);
-      if (editTextObjectName == null) {
+      id = R.id.check_Cordinates;
+      Button checkCordinates = ViewBindings.findChildViewById(rootView, id);
+      if (checkCordinates == null) {
         break missingId;
       }
 
       id = R.id.iv_captured_photo;
       ResizableRectangleImageView ivCapturedPhoto = ViewBindings.findChildViewById(rootView, id);
       if (ivCapturedPhoto == null) {
+        break missingId;
+      }
+
+      id = R.id.newObjectName;
+      EditText newObjectName = ViewBindings.findChildViewById(rootView, id);
+      if (newObjectName == null) {
         break missingId;
       }
 
@@ -128,7 +139,7 @@ public final class ActivityMakePhotoBinding implements ViewBinding {
       }
 
       return new ActivityMakePhotoBinding((RelativeLayout) rootView, addClass, buttonTakePhoto,
-          buttonUpload, editTextObjectName, ivCapturedPhoto, spinnerObjectClasses,
+          buttonUpload, checkCordinates, ivCapturedPhoto, newObjectName, spinnerObjectClasses,
           textViewCoordinates);
     }
     String missingId = rootView.getResources().getResourceName(id);

@@ -75,3 +75,13 @@ Qapp/src/main/java/org/tensorflow/lite/examples/objectdetection/CreateViewModel.
 Kapp/src/main/java/org/tensorflow/lite/examples/objectdetection/MakePhoto.kt,e\3\e3b365bd4fb82f97363a89e4938c74c8f08b9cf0
 ç
 ]app/src/main/java/org/tensorflow/lite/examples/objectdetection/ResizableRectangleImageView.kt,3\e\3e6a6bc1f8392f15b2e55051a98eb9aa5848b704
+ç
+]app/src/main/java/org/tensorflow/lite/examples/objectdetection/services/CreateTopicService.kt,1\d\1d53b101ab22150455d9cb044cdd7e788f6f7f42
+ã
+[app/src/main/java/org/tensorflow/lite/examples/objectdetection/services/makeClassService.kt,3\c\3c0dfdc85a14e5772887b2578a400548ad291b11
+ã
+[app/src/main/java/org/tensorflow/lite/examples/objectdetection/services/MakeClassService.kt,c\1\c1956d4c3876cdaa1ab0297be85c754bc58a6dcd
+ç
+]app/src/main/java/org/tensorflow/lite/examples/objectdetection/services/CreateClassService.kt,4\1\4133b9077569c566b2868adc4d845d0c5309574b
+Ö
+Uapp/src/main/java/org/tensorflow/lite/examples/objectdetection/services/GetClasses.kt,c\b\cbf9a527d1c3c83da99da54c82bf6c9bea6eb77c

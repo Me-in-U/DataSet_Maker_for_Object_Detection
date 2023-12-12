@@ -4,6 +4,8 @@ package org.tensorflow.lite.examples.objectdetection.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,11 +22,19 @@ public final class FragmentCreateBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
+  public final Button buttonAddTopic;
+
+  @NonNull
+  public final EditText editTextNewTopic;
+
+  @NonNull
   public final RecyclerView recyclerView;
 
-  private FragmentCreateBinding(@NonNull RelativeLayout rootView,
-      @NonNull RecyclerView recyclerView) {
+  private FragmentCreateBinding(@NonNull RelativeLayout rootView, @NonNull Button buttonAddTopic,
+      @NonNull EditText editTextNewTopic, @NonNull RecyclerView recyclerView) {
     this.rootView = rootView;
+    this.buttonAddTopic = buttonAddTopic;
+    this.editTextNewTopic = editTextNewTopic;
     this.recyclerView = recyclerView;
   }
 
@@ -55,13 +65,26 @@ public final class FragmentCreateBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.button_add_topic;
+      Button buttonAddTopic = ViewBindings.findChildViewById(rootView, id);
+      if (buttonAddTopic == null) {
+        break missingId;
+      }
+
+      id = R.id.editText_NewTopic;
+      EditText editTextNewTopic = ViewBindings.findChildViewById(rootView, id);
+      if (editTextNewTopic == null) {
+        break missingId;
+      }
+
       id = R.id.recycler_view;
       RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
       if (recyclerView == null) {
         break missingId;
       }
 
-      return new FragmentCreateBinding((RelativeLayout) rootView, recyclerView);
+      return new FragmentCreateBinding((RelativeLayout) rootView, buttonAddTopic, editTextNewTopic,
+          recyclerView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

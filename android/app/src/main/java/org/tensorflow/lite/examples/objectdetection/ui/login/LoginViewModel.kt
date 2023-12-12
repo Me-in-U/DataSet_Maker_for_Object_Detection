@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
 import org.tensorflow.lite.examples.objectdetection.data.LoginCredentials
-import org.tensorflow.lite.examples.objectdetection.data.LoginResponse
+import org.tensorflow.lite.examples.objectdetection.data.NormalResponse
 import org.tensorflow.lite.examples.objectdetection.data.LoginRepository
 
 import org.tensorflow.lite.examples.objectdetection.R
@@ -47,16 +47,16 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
         val service = retrofit.create(LoginService::class.java)
         val call = service.loginUser(LoginCredentials(username, password))
 
-        call.enqueue(object : Callback<LoginResponse> {
-            override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
+        call.enqueue(object : Callback<NormalResponse> {
+            override fun onResponse(call: Call<NormalResponse>, response: Response<NormalResponse>) {
                 if (response.isSuccessful && response.body() != null) {
-                    val loginResponse = response.body()!!
-                    if (loginResponse.success) {
+                    val returnResponse = response.body()!!
+                    if (returnResponse.success) {
                         _loginResult.value = LoginResult(success = LoggedInUserView(displayName = username))
                         Log.d("TEST", "로그인 성공")
                     } else {
                         // 실패한 경우, 서버의 메시지를 사용
-                        _loginResult.value = LoginResult(error = R.string.login_failed, message = loginResponse.message)
+                        _loginResult.value = LoginResult(error = R.string.login_failed, message = returnResponse.message)
                         Log.d("TEST", "로그인 실패")
                     }
                 } else {
@@ -65,7 +65,7 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
                 }
             }
 
-            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+            override fun onFailure(call: Call<NormalResponse>, t: Throwable) {
                 _loginResult.value = LoginResult(error = R.string.login_failed)
                 Log.d("TEST", "서버 연결 실패2: " + t.message)
             }

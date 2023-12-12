@@ -1,4 +1,4 @@
-#Mon Dec 11 06:46:03 KST 2023
+#Tue Dec 12 07:58:01 KST 2023
 base.0=C\:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=C\:\\Users\\LoewllZoe\\Documents\\GitHub\\Android_App_Private_Project\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex

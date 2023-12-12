@@ -1354,7 +1354,7 @@ int id bottom 0x7f090058
 int id bottom_sheet_layout 0x7f090059
 int id bounce 0x7f09005a
 int id buttonPanel 0x7f09005b
-int id button_first 0x7f09005c
+int id button_add_topic 0x7f090188
 int id button_take_photo 0x7f09005e
 int id button_upload 0x7f090183
 int id cache_measures 0x7f09005f
@@ -1366,6 +1366,7 @@ int id center_horizontal 0x7f090064
 int id center_vertical 0x7f090065
 int id chain 0x7f090066
 int id chains 0x7f090067
+int id check_Cordinates 0x7f09018b
 int id checkbox 0x7f090068
 int id checked 0x7f090069
 int id chronometer 0x7f09006a
@@ -1408,7 +1409,7 @@ int id dragUp 0x7f09008e
 int id easeIn 0x7f09008f
 int id easeInOut 0x7f090090
 int id easeOut 0x7f090091
-int id editTextObjectName 0x7f090184
+int id editText_NewTopic 0x7f090189
 int id edit_query 0x7f090092
 int id end 0x7f090093
 int id enterAlways 0x7f090094
@@ -1492,6 +1493,7 @@ int id nav_host_fragment_container 0x7f0900e2
 int id navigationView 0x7f0900e4
 int id navigation_header_container 0x7f0900e5
 int id never 0x7f0900e6
+int id newObjectName 0x7f09018a
 int id none 0x7f0900e7
 int id normal 0x7f0900e8
 int id notification_background 0x7f0900e9
@@ -1608,7 +1610,6 @@ int id text_input_password_toggle 0x7f090155
 int id textinput_counter 0x7f090156
 int id textinput_error 0x7f090157
 int id textinput_helper_text 0x7f090158
-int id textview_first 0x7f090159
 int id threads_minus 0x7f09015b
 int id threads_plus 0x7f09015c
 int id threads_value 0x7f09015d
@@ -1725,7 +1726,6 @@ int layout design_text_input_password_icon 0x7f0c002e
 int layout fragment_camera 0x7f0c002f
 int layout fragment_camera_container 0x7f0c0030
 int layout fragment_create 0x7f0c0031
-int layout fragment_first 0x7f0c0032
 int layout fragment_my_page 0x7f0c0033
 int layout info_bottom_sheet 0x7f0c0035
 int layout mtrl_layout_snackbar 0x7f0c0036
