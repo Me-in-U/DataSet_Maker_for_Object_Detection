@@ -8,14 +8,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import org.tensorflow.lite.examples.objectdetection.R
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import org.tensorflow.lite.examples.objectdetection.CreateViewModel
-import org.tensorflow.lite.examples.objectdetection.MyAdapter
+import org.tensorflow.lite.examples.objectdetection.ui.showTopics.CreateViewModel
+import org.tensorflow.lite.examples.objectdetection.ui.showTopics.TopicDataRecyclerView
 import org.tensorflow.lite.examples.objectdetection.data.NormalResponse
 import org.tensorflow.lite.examples.objectdetection.data.TopicData
 import org.tensorflow.lite.examples.objectdetection.data.UserSession
@@ -34,32 +36,48 @@ val client = OkHttpClient.Builder()
     .build()
 class CreateFragment : Fragment() {
     private lateinit var viewModel: CreateViewModel
-    private lateinit var adapter: MyAdapter
+    private lateinit var adapter: TopicDataRecyclerView
     private lateinit var recyclerView: RecyclerView
+    private lateinit var username:String
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_create, container, false)
-        val username = UserSession.getUsername(requireContext()) ?: ""
+        username = UserSession.getUsername(requireContext()) ?: ""
 
         viewModel = ViewModelProvider(this).get(CreateViewModel::class.java)
-
         viewModel.fetchDataFromServer(username)
-
         recyclerView = view.findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        adapter = MyAdapter(emptyList())
+        adapter = TopicDataRecyclerView(emptyList())
         recyclerView.adapter = adapter
-
-        viewModel.items.observe(viewLifecycleOwner, { items ->
+        viewModel.items.observe(viewLifecycleOwner) { items ->
             adapter.updateItems(items)
-        })
+        }
 
+        //!주제 추가
         val editTextNewTopic: EditText = view.findViewById(R.id.editText_NewTopic)
-        val buttonAddTopic :Button = view.findViewById(R.id.button_add_topic)
+        val buttonAddTopic :ImageButton = view.findViewById(R.id.button_add_topic)
         buttonAddTopic.setOnClickListener {
             val newTopic = editTextNewTopic.text.toString()
-            makeTopic(username,newTopic)
+            // newTopic이 공백인지 확인
+            if (newTopic.trim().isEmpty()) {
+                // 공백일 경우 Toast 메시지 표시
+                Toast.makeText(context, "주제를 입력해주세요.", Toast.LENGTH_SHORT).show()
+            } else {
+                // 공백이 아닐 경우 makeTopic 함수 호출
+                makeTopic(username, newTopic)
+            }
+        }
+        //!Topic 리로드
+        val buttonReloadTopic : ImageButton = view.findViewById(R.id.reload_topics)
+        buttonReloadTopic.setOnClickListener(){
+            viewModel.fetchDataFromServer(username)
         }
         return view
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.fetchDataFromServer(username)
     }
     private fun makeTopic(username: String, newTopic:String) {
         val retrofit = Retrofit.Builder()
@@ -76,12 +94,10 @@ class CreateFragment : Fragment() {
                 if (response.isSuccessful&& response.body() != null) {
                     val returnResponse = response.body()!!
                     val message :String= returnResponse.message
+                    Toast.makeText(context, "추가되었습니다", Toast.LENGTH_LONG).show()
+                    Log.d("TEST", message)
                     if (returnResponse.success) {
                         viewModel.fetchDataFromServer(username)
-                        Log.d("TEST", message)
-                    } else {
-                        // 실패한 경우, 서버의 메시지를 사용
-                        Log.d("TEST", message)
                     }
                 } else {
                     Log.d("TEST", "서버 연결 실패")

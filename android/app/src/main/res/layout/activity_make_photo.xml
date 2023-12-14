@@ -10,12 +10,22 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center">
-
-        <Spinner
-            android:id="@+id/spinnerObjectClasses"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/select_class" />
+            <Spinner
+                android:id="@+id/spinnerObjectClasses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -25,13 +35,12 @@
                 android:id="@+id/newObjectName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="새로운 오브젝트 이름"
-                android:textSize="30sp"/>
+                android:hint="새로운 Class 이름"
+                android:textSize="20sp"/>
             <Button
                 android:id="@+id/add_class"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/button_take_photo"
                 android:text="추가"
                 android:textSize="20sp"/>
         </LinearLayout>
@@ -45,7 +54,7 @@
             android:textSize="25sp"/>
 
         <!-- 이미지를 표시할 ImageView -->
-        <org.tensorflow.lite.examples.objectdetection.ResizableRectangleImageView
+        <org.tensorflow.lite.examples.objectdetection.ui.editPhoto.CordinateBox
             android:id="@+id/iv_captured_photo"
             android:layout_width="match_parent"
             android:layout_height="416dp"

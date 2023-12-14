@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
+import android.widget.Toast
 import org.tensorflow.lite.examples.objectdetection.data.LoginCredentials
 import org.tensorflow.lite.examples.objectdetection.data.NormalResponse
 import org.tensorflow.lite.examples.objectdetection.data.LoginRepository
@@ -18,6 +19,7 @@ import retrofit2.Response
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.tensorflow.lite.examples.objectdetection.services.LoginService
+import org.tensorflow.lite.examples.objectdetection.services.RegisterService
 
 val logging = HttpLoggingInterceptor().apply {
     level = HttpLoggingInterceptor.Level.BODY
@@ -67,6 +69,38 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
 
             override fun onFailure(call: Call<NormalResponse>, t: Throwable) {
                 _loginResult.value = LoginResult(error = R.string.login_failed)
+                Log.d("TEST", "서버 연결 실패2: " + t.message)
+            }
+        })
+    }
+    fun register(username: String, password: String) {
+        val retrofit = Retrofit.Builder()
+            .baseUrl("http://jun3021306.iptime.org:8080/user/") // 서버 URL
+            .addConverterFactory(GsonConverterFactory.create())
+            .client(client) // OkHttp 클라이언트 추가
+            .build()
+
+        val service = retrofit.create(RegisterService::class.java)
+        val call = service.register(LoginCredentials(username, password))
+
+        call.enqueue(object : Callback<NormalResponse> {
+            override fun onResponse(call: Call<NormalResponse>, response: Response<NormalResponse>) {
+                if (response.isSuccessful && response.body() != null) {
+                    val returnResponse = response.body()!!
+                    if (returnResponse.success) {
+                        _loginResult.value = LoginResult(error = R.string.login_failed, message = "회원가입 완료")
+                        Log.d("TEST", "회원가입 성공")
+                    } else {
+                        // 실패한 경우, 서버의 메시지를 사용
+                        _loginResult.value = LoginResult(error = R.string.login_failed, message = returnResponse.message)
+                        Log.d("TEST", returnResponse.message)
+                    }
+                } else {
+                    Log.d("TEST", "서버 연결 실패1")
+                }
+            }
+
+            override fun onFailure(call: Call<NormalResponse>, t: Throwable) {
                 Log.d("TEST", "서버 연결 실패2: " + t.message)
             }
         })

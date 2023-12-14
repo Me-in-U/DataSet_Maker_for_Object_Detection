@@ -22,12 +22,22 @@ import org.tensorflow.lite.examples.objectdetection.data.UserSession
 import org.tensorflow.lite.examples.objectdetection.permission.PermissionCamera
 
 class LoginActivity : AppCompatActivity() {
-
+    private var time : Long= 0;
     private lateinit var loginViewModel: LoginViewModel
     private lateinit var binding: ActivityLoginBinding
     // 권한 요청에 사용할 요청 코드
     companion object {
         const val PERMISSIONS_REQUEST_CAMERA = 1
+    }
+    override fun onBackPressed() {
+        if(time + 3000 > System.currentTimeMillis()){
+            super.onBackPressed()
+            finish()
+        }else{
+            Toast.makeText(applicationContext, "'뒤로'버튼을 한번 더 누르면 종료됩니다.",
+                Toast.LENGTH_SHORT).show()
+        }
+        time = System.currentTimeMillis()
     }
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
@@ -45,9 +55,15 @@ class LoginActivity : AppCompatActivity() {
         val username = binding.username
         val password = binding.password
         val login = binding.login
+        val resister = binding.resister
         val loading = binding.loading
 
-        binding.register?.setOnClickListener {
+        val previousUsername :String? = UserSession.getUsername(this)
+        if(previousUsername != null){
+            binding.previousUserBox?.visibility = View.VISIBLE
+            binding.previousUsername?.text = previousUsername
+        }
+        binding.useprevious?.setOnClickListener {
             // NaviActivity로 이동하는 Intent 생성
             val intent = Intent(this, NaviActivity::class.java)
             startActivity(intent)
@@ -62,7 +78,7 @@ class LoginActivity : AppCompatActivity() {
 
             // disable login button unless both username / password is valid
             login.isEnabled = loginState.isDataValid
-
+            resister?.isEnabled = loginState.isDataValid
             if (loginState.usernameError != null) {
                 username.error = getString(loginState.usernameError)
             }
@@ -81,7 +97,7 @@ class LoginActivity : AppCompatActivity() {
             if (loginResult.success != null) {
                 updateUiWithUser(loginResult.success)
             }
-            setResult(Activity.RESULT_OK)
+            setResult(RESULT_OK)
         })
 
         username.afterTextChanged {
@@ -114,6 +130,10 @@ class LoginActivity : AppCompatActivity() {
                 loading.visibility = View.VISIBLE
                 loginViewModel.login(username.text.toString(), password.text.toString())
             }
+            resister?.setOnClickListener {
+                loading.visibility = View.VISIBLE
+                loginViewModel.register(username.text.toString(), password.text.toString())
+            }
         }
 
     }
@@ -123,12 +143,11 @@ class LoginActivity : AppCompatActivity() {
         PermissionCamera.requestPermission(this, Manifest.permission.CAMERA, PERMISSIONS_REQUEST_CAMERA)
     }
     private fun updateUiWithUser(model: LoggedInUserView) {
-        val welcome = getString(R.string.welcome)
         val displayName = model.displayName
         // TODO : initiate successful logged in experience
         Toast.makeText(
             applicationContext,
-            "$welcome $displayName",
+            "$displayName 님 로그인 되었습니다.",
             Toast.LENGTH_LONG
         ).show()
         // Inside LoginActivity, after a successful login

@@ -2,40 +2,49 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp">
-    <TextView
-        android:id="@+id/item_topicID"
-        android:layout_width="wrap_content"
+    android:padding="8dp"
+    android:background="@drawable/rounded_border"
+    android:layout_marginBottom="4dp">
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:visibility="gone"
-        android:layout_marginEnd="8dp"
-        android:text="TopicID" />
-    <!-- Topic TextView -->
-    <TextView
-        android:id="@+id/item_topic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_marginEnd="8dp"
-        android:text="Topic" />
-
-    <!-- Count TextView -->
-    <TextView
-        android:id="@+id/item_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/item_topic"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="4dp"
-        android:text="Count" />
-
-    <!-- Edit Button -->
-    <Button
-        android:id="@+id/item_button_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:text="사진추가" />
-
+        android:orientation="horizontal"
+        android:id="@+id/show_photos"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/item_topicID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginEnd="8dp"
+                android:text="TopicID" />
+            <TextView
+                android:id="@+id/item_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Topic"
+                android:textSize="20sp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp">
+                    <TextView
+                        android:id="@+id/item_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Count" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="개" />
+                </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>
