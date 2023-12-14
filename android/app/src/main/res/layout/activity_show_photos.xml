@@ -11,14 +11,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginBottom="90dp">
 
         <TextView
             android:id="@+id/item_topic"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="주제가 들어갈 자리"
-            android:textSize="30sp"
+            android:textSize="35sp"
             android:layout_weight="1"
             >
 
@@ -26,7 +27,7 @@
         <ImageButton
             android:id="@+id/add_photo_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:src="@drawable/baseline_add_a_photo_24"
             android:text="사진추가"
             android:contentDescription="해당 주제 사진 추가" />
@@ -37,18 +38,32 @@
             android:orientation="vertical"
             android:gravity="center"
             >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="전체 이미지"/>
             <ImageView
                 android:id="@+id/topicImageView"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
                 android:src="@drawable/baseline_browser_not_supported_24"/>
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="크롭 이미지"
+                android:layout_marginTop="20dp"/>
+            <ImageView
+                android:id="@+id/topicClassImageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/baseline_browser_not_supported_24"/>
             <TextView
                 android:id="@+id/classNameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:paddingTop="4dp"
                 android:text="No Image"/>
         </LinearLayout>
         <LinearLayout
@@ -56,6 +71,7 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:gravity="center"
+            android:layout_marginTop="15dp"
             >
             <ImageButton
                 android:id="@+id/previous_image_button"

@@ -30,7 +30,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginBottom="30dp">
             <EditText
                 android:id="@+id/newObjectName"
                 android:layout_width="match_parent"
@@ -45,13 +46,7 @@
                 android:textSize="20sp"/>
         </LinearLayout>
 
-        <!-- Coordinates Display -->
-        <TextView
-            android:id="@+id/textView_Coordinates"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="x1: ???, y1: ???\nx2: ???, y2: ???"
-            android:textSize="25sp"/>
+
 
         <!-- 이미지를 표시할 ImageView -->
         <org.tensorflow.lite.examples.objectdetection.ui.editPhoto.CordinateBox
@@ -84,7 +79,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/button_take_photo"
-            android:text="좌표확인"
+            android:text="좌표확인해보기"
             android:textSize="20sp"/>
+        <!-- Coordinates Display -->
+        <TextView
+            android:id="@+id/textView_Coordinates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x1: ???, y1: ???\nx2: ???, y2: ???"
+            android:textSize="25sp"/>
     </LinearLayout>
 </RelativeLayout>

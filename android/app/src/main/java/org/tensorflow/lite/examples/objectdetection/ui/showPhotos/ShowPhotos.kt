@@ -1,6 +1,7 @@
 package org.tensorflow.lite.examples.objectdetection.ui.showPhotos
 
 import android.content.Intent
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,19 +11,12 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.launch
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.tensorflow.lite.examples.objectdetection.R
 import org.tensorflow.lite.examples.objectdetection.data.ID
 import org.tensorflow.lite.examples.objectdetection.data.IDResponse
-import org.tensorflow.lite.examples.objectdetection.data.PhotoAndClassData
+import org.tensorflow.lite.examples.objectdetection.data.PhotoNCordNClassnameData
 import org.tensorflow.lite.examples.objectdetection.data.TopicID
 import org.tensorflow.lite.examples.objectdetection.fragments.client
 import org.tensorflow.lite.examples.objectdetection.services.GetPhoto
@@ -48,6 +42,7 @@ class ShowPhotos : AppCompatActivity() {
     private lateinit var topicText:TextView
     private var ids : List<Int> = listOf()
     private lateinit var topicImageView : ImageView
+    private lateinit var topicClassImageView : ImageView
     private lateinit var classNameTextView : TextView
     private lateinit var previousImageButton : ImageButton
     private lateinit var nextImageButton : ImageButton
@@ -62,6 +57,7 @@ class ShowPhotos : AppCompatActivity() {
         topicText = findViewById(R.id.item_topic)
         topicText.text = topic
         topicImageView = findViewById(R.id.topicImageView)
+        topicClassImageView = findViewById(R.id.topicClassImageView)
         classNameTextView = findViewById(R.id.classNameTextView)
         imagesCounter = findViewById(R.id.imagesCounter)
 
@@ -140,11 +136,15 @@ class ShowPhotos : AppCompatActivity() {
             .build()
         val service = retrofit.create(GetPhoto::class.java)
         val call = service.getPhoto(ID(id))
-        call.enqueue(object : Callback<PhotoAndClassData> {
-            override fun onResponse(call: Call<PhotoAndClassData>, response: Response<PhotoAndClassData>) {
+        call.enqueue(object : Callback<PhotoNCordNClassnameData> {
+            override fun onResponse(call: Call<PhotoNCordNClassnameData>, response: Response<PhotoNCordNClassnameData>) {
                 if (response.isSuccessful&& response.body() != null) {
                     val returnResponse = response.body()!!
                     val photoBase64 = returnResponse.photo
+                    val x1 = returnResponse.x1
+                    val y1 = returnResponse.y1
+                    val x2 = returnResponse.x2
+                    val y2 = returnResponse.y2
                     val classname = returnResponse.className
                     // Base64 문자열을 ByteArray로 디코딩
                     val decodedString = Base64.decode(photoBase64, Base64.DEFAULT)
@@ -153,6 +153,9 @@ class ShowPhotos : AppCompatActivity() {
                     runOnUiThread {
                         // ImageView에 Bitmap 설정
                         topicImageView.setImageBitmap(decodedByte)
+                        //잘린 bitmap 표시
+                        val croppedBitmap = Bitmap.createBitmap(decodedByte, x1, y1, x2 - x1, y2 - y1)
+                        topicClassImageView.setImageBitmap(croppedBitmap)
                         // TextView에 classname 설정
                         classNameTextView.text = classname
                         val imageCounterText = getString(R.string.image_counter, currentImageIndex + 1, ids.size)
@@ -163,7 +166,7 @@ class ShowPhotos : AppCompatActivity() {
                 }
             }
 
-            override fun onFailure(call: Call<PhotoAndClassData>, t: Throwable) {
+            override fun onFailure(call: Call<PhotoNCordNClassnameData>, t: Throwable) {
                 Log.d("Test", "실패")
                 return
             }

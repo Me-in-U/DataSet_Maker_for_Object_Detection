@@ -15,6 +15,6 @@ data class ID(val id : Int)
 
 data class PictureData(val topicId: Int, val picture: String , val x1 : Int, val y1 : Int, val x2 : Int, val y2 : Int, val className: String)
 
-data class PhotoAndClassData(val photo: String, val className: String)
+data class PhotoNCordNClassnameData(val photo: String,val x1: Int,val y1: Int, val x2: Int,val y2: Int,val className: String)
 
 data class IDResponse(val success: Boolean, val idList: List<Int>)
