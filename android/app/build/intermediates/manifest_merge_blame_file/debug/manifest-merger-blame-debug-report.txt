@@ -1,0 +1,157 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:dist="http://schemas.android.com/apk/distribution"
+4    package="org.tensorflow.lite.examples.objectdetection"
+5    android:versionCode="1"
+6    android:versionName="1.0.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="21"
+9-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml
+10        android:targetSdkVersion="32" />
+10-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml
+11    <!-- Enable instant app support -->
+12    <dist:module dist:instant="true" /> <!-- Declare features -->
+12-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:7:5-40
+12-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:7:18-37
+13    <uses-feature android:name="android.hardware.camera" /> <!-- Declare permissions -->
+13-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:8:5-60
+13-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:8:19-57
+14    <uses-permission android:name="android.permission.CAMERA" />
+14-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:9:5-65
+14-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:9:22-62
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:10:5-67
+15-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:10:22-64
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:11:5-79
+16-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:11:22-76
+17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+18    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+19    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+20
+21    <application
+21-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:13:5-55:19
+22        android:allowBackup="true"
+22-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:14:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.6.0] C:\Users\LoewllZoe\.gradle\caches\transforms-3\fe3515981a6f5fd1e99c2a066679ea55\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+24        android:debuggable="true"
+25        android:icon="@mipmap/ic_launcher"
+25-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:15:9-43
+26        android:label="@string/app_name"
+26-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:16:9-41
+27        android:roundIcon="@mipmap/ic_launcher_round"
+27-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:17:9-54
+28        android:taskAffinity=""
+28-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:18:9-32
+29        android:usesCleartextTraffic="true" >
+29-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:19:9-44
+30        <activity
+30-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:21:9-39:20
+31            android:name="org.tensorflow.lite.examples.objectdetection.ui.login.LoginActivity"
+31-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:22:13-51
+32            android:clearTaskOnLaunch="true"
+32-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:23:13-45
+33            android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize"
+33-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:24:13-91
+34            android:exported="true"
+34-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:25:13-36
+35            android:icon="@mipmap/ic_launcher"
+35-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:26:13-47
+36            android:resizeableActivity="true"
+36-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:27:13-46
+37            android:rotationAnimation="seamless"
+37-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:28:13-49
+38            android:theme="@style/AppTheme" > <!-- Main app intent filter -->
+38-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:29:13-44
+39            <intent-filter>
+39-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:31:13-35:29
+40                <action android:name="android.intent.action.MAIN" />
+40-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:32:17-69
+40-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:32:25-66
+41
+42                <category android:name="android.intent.category.LAUNCHER" />
+42-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:34:17-77
+42-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:34:27-74
+43            </intent-filter> <!-- Declare notch support -->
+44            <meta-data
+44-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:36:13-38:40
+45                android:name="android.notch_support"
+45-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:37:17-53
+46                android:value="true" />
+46-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:38:17-37
+47        </activity>
+48        <activity
+48-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:40:9-44:47
+49            android:name="org.tensorflow.lite.examples.objectdetection.NaviActivity"
+49-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:41:13-41
+50            android:exported="false"
+50-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:42:13-37
+51            android:label="NaviActivity"
+51-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:43:13-41
+52            android:theme="@style/AppTheme" />
+52-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:44:13-44
+53        <activity
+53-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:45:9-49:47
+54            android:name="org.tensorflow.lite.examples.objectdetection.ui.editPhoto.MakePhoto"
+54-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:46:13-51
+55            android:exported="false"
+55-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:47:13-37
+56            android:label="@string/title_activity_make_photo"
+56-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:48:13-62
+57            android:theme="@style/AppTheme" />
+57-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:49:13-44
+58        <activity
+58-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:50:9-54:47
+59            android:name="org.tensorflow.lite.examples.objectdetection.ui.showPhotos.ShowPhotos"
+59-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:51:13-53
+60            android:exported="false"
+60-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:52:13-37
+61            android:label="showPhotos"
+61-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:53:13-39
+62            android:theme="@style/AppTheme" />
+62-->C:\Users\LoewllZoe\Documents\GitHub\Android_App_Private_Project\android\app\src\main\AndroidManifest.xml:54:13-44
+63
+64        <uses-library
+64-->[androidx.window:window:1.0.0-alpha09] C:\Users\LoewllZoe\.gradle\caches\transforms-3\72b68338f3049da1a8e4f33abd6dc118\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:25:9-27:40
+65            android:name="androidx.window.extensions"
+65-->[androidx.window:window:1.0.0-alpha09] C:\Users\LoewllZoe\.gradle\caches\transforms-3\72b68338f3049da1a8e4f33abd6dc118\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:26:13-54
+66            android:required="false" />
+66-->[androidx.window:window:1.0.0-alpha09] C:\Users\LoewllZoe\.gradle\caches\transforms-3\72b68338f3049da1a8e4f33abd6dc118\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:27:13-37
+67        <uses-library
+67-->[androidx.window:window:1.0.0-alpha09] C:\Users\LoewllZoe\.gradle\caches\transforms-3\72b68338f3049da1a8e4f33abd6dc118\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:28:9-30:40
+68            android:name="androidx.window.sidecar"
+68-->[androidx.window:window:1.0.0-alpha09] C:\Users\LoewllZoe\.gradle\caches\transforms-3\72b68338f3049da1a8e4f33abd6dc118\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:29:13-51
+69            android:required="false" />
+69-->[androidx.window:window:1.0.0-alpha09] C:\Users\LoewllZoe\.gradle\caches\transforms-3\72b68338f3049da1a8e4f33abd6dc118\transformed\jetified-window-1.0.0-alpha09\AndroidManifest.xml:30:13-37
+70
+71        <service
+71-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\LoewllZoe\.gradle\caches\transforms-3\c029a055d81e123a22388c38e1ada5ac\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:26:9-35:19
+72            android:name="androidx.camera.core.impl.MetadataHolderService"
+72-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\LoewllZoe\.gradle\caches\transforms-3\c029a055d81e123a22388c38e1ada5ac\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:27:13-75
+73            android:enabled="false"
+73-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\LoewllZoe\.gradle\caches\transforms-3\c029a055d81e123a22388c38e1ada5ac\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:28:13-36
+74            android:exported="false" >
+74-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\LoewllZoe\.gradle\caches\transforms-3\c029a055d81e123a22388c38e1ada5ac\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:29:13-37
+75            <meta-data
+75-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\LoewllZoe\.gradle\caches\transforms-3\c029a055d81e123a22388c38e1ada5ac\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:32:13-34:89
+76                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+76-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\LoewllZoe\.gradle\caches\transforms-3\c029a055d81e123a22388c38e1ada5ac\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:33:17-103
+77                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+77-->[androidx.camera:camera-camera2:1.1.0-beta03] C:\Users\LoewllZoe\.gradle\caches\transforms-3\c029a055d81e123a22388c38e1ada5ac\transformed\jetified-camera-camera2-1.1.0-beta03\AndroidManifest.xml:34:17-86
+78        </service>
+79
+80        <provider
+80-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\LoewllZoe\.gradle\caches\transforms-3\57aba2c353e4e596ede2aca4447c85e8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+81            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+81-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\LoewllZoe\.gradle\caches\transforms-3\57aba2c353e4e596ede2aca4447c85e8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+82            android:authorities="org.tensorflow.lite.examples.objectdetection.lifecycle-process"
+82-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\LoewllZoe\.gradle\caches\transforms-3\57aba2c353e4e596ede2aca4447c85e8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+83            android:exported="false"
+83-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\LoewllZoe\.gradle\caches\transforms-3\57aba2c353e4e596ede2aca4447c85e8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+84            android:multiprocess="true" />
+84-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\LoewllZoe\.gradle\caches\transforms-3\57aba2c353e4e596ede2aca4447c85e8\transformed\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+85    </application>
+86
+87</manifest>

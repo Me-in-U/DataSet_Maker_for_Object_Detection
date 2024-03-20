@@ -1,6 +1,4 @@
 
-9
-	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 A
 gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
 <
@@ -35,8 +33,6 @@ Zapp/src/main/java/org/tensorflow/lite/examples/objectdetection/fragments/MyPage
 Napp/src/main/java/org/tensorflow/lite/examples/objectdetection/NaviActivity.kt,6\e\6e5a9255ec8ac1ba655834c44c2b019d30d56497
 Š
 Zapp/src/main/java/org/tensorflow/lite/examples/objectdetection/fragments/CreateFragment.kt,1\b\1b60078036297d16d1b0b5c64d4ee19c1e1c19d7
-{
-Kapp/src/main/java/org/tensorflow/lite/examples/objectdetection/MyAdapter.kt,b\2\b21c7f1c578bbe6226a31f32157b69463031606f
 ˆ
 Xapp/src/main/java/org/tensorflow/lite/examples/objectdetection/ui/login/LoginActivity.kt,f\8\f818ae47ecb1fe18cade6f7e3e7cf0de33678560
 ‹
@@ -69,28 +65,14 @@ Wapp/src/main/java/org/tensorflow/lite/examples/objectdetection/services/LoginSe
 Tapp/src/main/java/org/tensorflow/lite/examples/objectdetection/services/getTopics.kt,9\0\90c3cee1ccc4a0d4b119900d8b78d5e2da9e715d
 „
 Tapp/src/main/java/org/tensorflow/lite/examples/objectdetection/services/GetTopics.kt,7\c\7c3a5f3ff7706a9de77164c037392f9fc79337e7
-
-Qapp/src/main/java/org/tensorflow/lite/examples/objectdetection/CreateViewModel.kt,d\7\d7578bbb998232b58a7a902744bb884368a900d4
-{
-Kapp/src/main/java/org/tensorflow/lite/examples/objectdetection/MakePhoto.kt,e\3\e3b365bd4fb82f97363a89e4938c74c8f08b9cf0
-
-]app/src/main/java/org/tensorflow/lite/examples/objectdetection/ResizableRectangleImageView.kt,3\e\3e6a6bc1f8392f15b2e55051a98eb9aa5848b704
 
 ]app/src/main/java/org/tensorflow/lite/examples/objectdetection/services/CreateTopicService.kt,1\d\1d53b101ab22150455d9cb044cdd7e788f6f7f42
-‹
-[app/src/main/java/org/tensorflow/lite/examples/objectdetection/services/makeClassService.kt,3\c\3c0dfdc85a14e5772887b2578a400548ad291b11
-‹
-[app/src/main/java/org/tensorflow/lite/examples/objectdetection/services/MakeClassService.kt,c\1\c1956d4c3876cdaa1ab0297be85c754bc58a6dcd
 
 ]app/src/main/java/org/tensorflow/lite/examples/objectdetection/services/CreateClassService.kt,4\1\4133b9077569c566b2868adc4d845d0c5309574b
 …
 Uapp/src/main/java/org/tensorflow/lite/examples/objectdetection/services/GetClasses.kt,c\b\cbf9a527d1c3c83da99da54c82bf6c9bea6eb77c
 ˆ
 Xapp/src/main/java/org/tensorflow/lite/examples/objectdetection/services/UploadPicture.kt,1\f\1f26005e85fdec7ffd7fa1120e58b093a01df12d
-‡
-Wapp/src/main/java/org/tensorflow/lite/examples/objectdetection/TopicDataRecyclerView.kt,d\5\d5623aa2c817fc38649bacc4ca0e07b9822d6b9c
-~
-Napp/src/main/java/org/tensorflow/lite/examples/objectdetection/CordinateBox.kt,4\8\482e5a7c87b523a5d2ae4d6bc8f9470850c47132
 ‹
 [app/src/main/java/org/tensorflow/lite/examples/objectdetection/ui/editphoto/CordinateBox.kt,0\b\0b1df8699ff8edabe8ef17b00136b20e7654861e
 ˆ
@@ -105,21 +87,9 @@ Zapp/src/main/java/org/tensorflow/lite/examples/objectdetection/ui/showPhotos/Sh
 Xapp/src/main/java/org/tensorflow/lite/examples/objectdetection/ui/editPhoto/MakePhoto.kt,f\3\f3bb645770c059126b1ef092bdf3036ed73a5663
 ‹
 [app/src/main/java/org/tensorflow/lite/examples/objectdetection/ui/editPhoto/CordinateBox.kt,b\a\ba9a27cb9fd7e267f540ae50a368153316be5f38
-„
-Tapp/src/main/java/org/tensorflow/lite/examples/objectdetection/services/GetPhotos.kt,b\c\bc45af9d93606a7615fca4cf61e993390b247f9a
-Œ
-\app/src/main/java/org/tensorflow/lite/examples/objectdetection/ui/showPhotos/ImageAdapter.kt,2\a\2aa222f760c3bd23c7f2728e9b362651f8601ef2
 ‡
 Wapp/src/main/java/org/tensorflow/lite/examples/objectdetection/services/GetPhotosIDs.kt,6\e\6e831a62202cf34bdc7dd32dadcd925a4280d071
 ƒ
 Sapp/src/main/java/org/tensorflow/lite/examples/objectdetection/services/GetPhoto.kt,b\3\b3e80ca5a20b5539a34051ce1b3a98b1672d8a28
-Œ
-\app/src/main/java/org/tensorflow/lite/examples/objectdetection/ui/showPhotos/PhotoAdapter.kt,1\d\1dca2ae47b689ad16590cfbbc791577c4aaf58e0
-‘
-aapp/src/main/java/org/tensorflow/lite/examples/objectdetection/ui/showPhotos/PhotoPagingSource.kt,5\a\5a0f96c7ecd20b5a9dfcff09f8f11636b898ea74
-’
-bapp/src/main/java/org/tensorflow/lite/examples/objectdetection/ui/showPhotos/PhotoPagingAdapter.kt,2\1\21b776463fbca188f0cf7ac0d5989b1b5b82cbe7
-“
-capp/src/main/java/org/tensorflow/lite/examples/objectdetection/ui/showPhotos/ShowPhotosViewModel.kt,f\6\f69ac1e1ff66a464d5bcd52d9e47105567e2a4bc
 Š
 Zapp/src/main/java/org/tensorflow/lite/examples/objectdetection/services/RegisterService.kt,f\0\f016af33d757b3726f5268ca9d6d5d1ae200834e

@@ -16,17 +16,16 @@ object PermissionCamera {
         }
     }
 
-    fun handleRequestPermissionResult(activity: Activity, requestCode: Int, permissions: Array<out String>, grantResults: IntArray, requiredPermission: String) {
-        if (requestCode == requestCode) {
-            if (grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
-                // 권한 거부됨, 설정 화면으로 이동
-                Toast.makeText(activity, "카메라 권한이 필요합니다. 설정에서 권한을 허용해주세요.", Toast.LENGTH_LONG).show()
-                val intent = Intent().apply {
-                    action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
-                    data = Uri.fromParts("package", activity.packageName, null)
-                }
-                activity.startActivity(intent)
+    fun handleRequestPermissionResult(activity: Activity, requestCode: Int, permissions: Array<out String>,
+                                      grantResults: IntArray, requiredPermission: String) {
+        if (grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
+            // 권한 거부됨, 설정 화면으로 이동
+            Toast.makeText(activity, "카메라 권한이 필요합니다. 설정에서 권한을 허용해주세요.", Toast.LENGTH_LONG).show()
+            val intent = Intent().apply {
+                action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
+                data = Uri.fromParts("package", activity.packageName, null)
             }
+            activity.startActivity(intent)
         }
     }
 }
