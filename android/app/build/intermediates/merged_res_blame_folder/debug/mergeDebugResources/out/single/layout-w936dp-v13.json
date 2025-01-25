@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-43:/layout-w936dp-v13/activity_login.xml",
+        "source": "org.tensorflow.lite.examples.objectdetection.app-main-46:/layout-w936dp/activity_login.xml"
+    }
+]

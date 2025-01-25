@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-43:/layout/info_bottom_sheet.xml",
+        "source": "org.tensorflow.lite.examples.objectdetection.app-main-46:/layout/info_bottom_sheet.xml"
+    },
+    {
+        "merged": "org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-43:/layout/activity_navi.xml",
+        "source": "org.tensorflow.lite.examples.objectdetection.app-main-46:/layout/activity_navi.xml"
+    },
+    {
+        "merged": "org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-43:/layout/activity_login.xml",
+        "source": "org.tensorflow.lite.examples.objectdetection.app-main-46:/layout/activity_login.xml"
+    },
+    {
+        "merged": "org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-43:/layout/recycle_item.xml",
+        "source": "org.tensorflow.lite.examples.objectdetection.app-main-46:/layout/recycle_item.xml"
+    },
+    {
+        "merged": "org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-43:/layout/activity_make_photo.xml",
+        "source": "org.tensorflow.lite.examples.objectdetection.app-main-46:/layout/activity_make_photo.xml"
+    },
+    {
+        "merged": "org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-43:/layout/fragment_my_page.xml",
+        "source": "org.tensorflow.lite.examples.objectdetection.app-main-46:/layout/fragment_my_page.xml"
+    },
+    {
+        "merged": "org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-43:/layout/activity_show_photos.xml",
+        "source": "org.tensorflow.lite.examples.objectdetection.app-main-46:/layout/activity_show_photos.xml"
+    },
+    {
+        "merged": "org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-43:/layout/fragment_camera.xml",
+        "source": "org.tensorflow.lite.examples.objectdetection.app-main-46:/layout/fragment_camera.xml"
+    },
+    {
+        "merged": "org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-43:/layout/fragment_camera_container.xml",
+        "source": "org.tensorflow.lite.examples.objectdetection.app-main-46:/layout/fragment_camera_container.xml"
+    },
+    {
+        "merged": "org.tensorflow.lite.examples.objectdetection.app-mergeDebugResources-43:/layout/fragment_create.xml",
+        "source": "org.tensorflow.lite.examples.objectdetection.app-main-46:/layout/fragment_create.xml"
+    }
+]

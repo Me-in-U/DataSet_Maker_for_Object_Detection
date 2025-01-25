@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginBottom="30dp">
+        <!-- RecyclerView -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/editText_NewTopic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="주제를 적어주세요"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                />
+
+            <ImageButton
+                android:id="@+id/button_add_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_add_24"
+                android:text="주제 추가" />
+            <ImageButton
+                android:id="@+id/reload_topics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_update_24"
+                android:text="주제 추가"
+                android:contentDescription="주제 다시 로드" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+
+</RelativeLayout>

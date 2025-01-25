@@ -99,6 +99,7 @@ class MakePhoto : AppCompatActivity() {
         uploadButton.visibility = View.INVISIBLE
         checkCordi.visibility = View.INVISIBLE
     }
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
