@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Topic 추가 테스트</title>
+	</head>
+	<body>
+		<h1>새 주제 추가</h1>
+		<form id="addTopicForm">
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username" /><br /><br />
+			<label for="topic">Topic:</label>
+			<input type="text" id="topic" name="topic" /><br /><br />
+			<input type="button" value="Submit" onclick="submitForm()" />
+		</form>
+
+		<script>
+			function submitForm() {
+				var xhr = new XMLHttpRequest();
+				var url = "http://url/makeData/makeTopic.php"; // PHP 스크립트의 URL
+				xhr.open("POST", url, true);
+				xhr.setRequestHeader("Content-Type", "application/json");
+				xhr.onreadystatechange = function () {
+					if (xhr.readyState === 4 && xhr.status === 200) {
+						var json = JSON.parse(xhr.responseText);
+						console.log(json.message);
+						alert(json.message);
+					}
+				};
+				var data = JSON.stringify({
+					username: document.getElementById("username").value,
+					topic: document.getElementById("topic").value,
+				});
+				xhr.send(data);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test PHP Script</title>
+    <script>
+      function sendData() {
+        var xhr = new XMLHttpRequest();
+        var url = "http://url/getData/getTopics.php"; // PHP 스크립트 URL로 변경하세요
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            // 서버 응답 처리
+            var json = JSON.parse(xhr.responseText);
+            console.log(json);
+            document.getElementById("result").innerHTML = JSON.stringify(
+              json,
+              undefined,
+              2
+            );
+          }
+        };
+
+        var data = JSON.stringify({
+          username: document.getElementById("username").value,
+        });
+        xhr.send(data);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Test PHP Script</h2>
+    <input
+      type="text"
+      id="username"
+      name="username"
+      placeholder="Enter Username"
+    />
+    <button onclick="sendData()">Send</button>
+
+    <pre id="result"></pre>
+  </body>
+</html>
